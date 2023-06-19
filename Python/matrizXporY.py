@@ -6,7 +6,7 @@ matriz = []
 linhas = int(input("Qualtas linhas você deseja adicionar na matriz? "))
 colunas = int(input("Qualtas colunas você deseja adicionar na matriz? "))
 
-for _ in range(linhas):
+for i in range(linhas):
     nova_linha = [0] * colunas
     matriz.append(nova_linha)
     
