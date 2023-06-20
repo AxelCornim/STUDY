@@ -1,28 +1,25 @@
 import os
 os.system("cls")
 
+linhas = int(input("Quantas linhas você deseja adicionar? "))
+colunas = int(input("Quantas colunas você deseja adicionar? "))
+
 matriz = []
 
+NumMar = int(input("Digite o número Y que deseja colocar na matriz: "))
+
 primeiros_numeros = []
-for _ in range(3):
+for _ in range(NumMar):
     numero = int(input("Digite X números para a matriz: "))
     primeiros_numeros.append(numero)
 
-for _ in range(len(matriz)):
-    matriz[_] = primeiros_numeros[:]
+for _ in range(linhas):
+    linha = []
+    for _ in range(colunas):
+        linha.append(primeiros_numeros[_ % NumMar])
+    matriz.append(linha)
 
 os.system("cls")
-linhas = int(input("Quantas linhas adicionais você deseja adicionar? "))
-colunas = int(input("Quantas colunas adicionais você deseja adicionar? "))
-
-for _ in range(linhas):
-    nova_linha = primeiros_numeros[:]
-    matriz.append(nova_linha)
-
-for linha in matriz:
-    linha.extend([0] * colunas)
-
-print()
 print("Matriz preenchida:")
 for linha in matriz:
     print(linha)
