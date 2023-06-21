@@ -15,8 +15,11 @@ for _ in range(NumMar):
 
 for _ in range(linhas):
     linha = []
-    for _ in range(colunas):
-        linha.append(primeiros_numeros[_ % NumMar])
+    for j in range(colunas):
+        if j < NumMar:
+            linha.append(numero)
+        else:
+            linha.append(0)
     matriz.append(linha)
 
 os.system("cls")
